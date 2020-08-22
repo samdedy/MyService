@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startService(myStartServiceIntent);
                 break;
             case R.id.btn_start_intent_service:
-
+                Intent mStartIntentService = new Intent(MainActivity.this, MyIntentService.class);
+                mStartIntentService.putExtra(MyIntentService.EXTRA_DURATION, 5000L);
+                startService(mStartIntentService);
                 break;
             case R.id.btn_start_bound_service:
 
